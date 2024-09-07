@@ -262,5 +262,5 @@ document.addEventListener('DOMContentLoaded', function() {
 └── images/
     └── logo.png
 git add .
-git commit -m "Añadir página web para la matriz Garc.ia"
+git commit -m "http://garc_ia.ch/"
 git push origin main
