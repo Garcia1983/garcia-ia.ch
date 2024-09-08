@@ -43,8 +43,8 @@
 <h2>Información de Contacto</h2>
 <ul>
   <li>Email: info@garcia-ia.ch</li>
-  <li>Teléfono: +41 XX XXX XX XX</li>
-  <li>Dirección: [Dirección en Suiza]</li>
+  <li>Teléfono: +41 76 686 78 64</li>
+  <li>Dirección: [ Suiza]</li>
 </ul>
 
 <h2>Formulario de Contacto</h2>
@@ -57,12 +57,17 @@ garcia-ia-ch/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garc.ia - Líder global en soluciones de Inteligencia Artificial. Ofrecemos consultoría, desarrollo e integración de sistemas de IA.">
     <title>Garc.ia - Líder en Soluciones de IA</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Garc.ia Logo" height="50">
+            </div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -76,22 +81,22 @@ garcia-ia-ch/
     <main>
         <section id="inicio">
             <h1>Bienvenido a Garc.ia</h1>
-            <p>Líder global en soluciones de Inteligencia Artificial</p>
+            <p>Líder en asistencia online para servicios de Inteligencia Artificial</p>
         </section>
 
         <section id="servicios">
             <h2>Nuestros Servicios</h2>
             <ul>
                 <li>Consultoría en IA</li>
-                <li>Desarrollo de Soluciones Personalizadas</li>
-                <li>Integración de Sistemas de IA</li>
-                <li>Investigación y Desarrollo en IA</li>
+                <li>Desarrollo de soluciones personalizadas</li>
+                <li>Integración de sistemas de IA</li>
+                <li>Soporte técnico 24/7</li>
             </ul>
         </section>
 
         <section id="sobre-nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Garc.ia es una empresa líder en el desarrollo e implementación de soluciones de Inteligencia Artificial. Con sede en Suiza, ofrecemos servicios innovadores a nivel global a través de nuestras filiales especializadas.</p>
+            <h2>Sobre Garc.ia</h2>
+            <p>Fundada en Suiza, Garc.ia es pionera en la provisión de servicios de asistencia online en el campo de la Inteligencia Artificial. Nuestra misión es hacer que la IA sea accesible y beneficiosa para empresas de todos los tamaños.</p>
         </section>
 
         <section id="filiales">
@@ -111,8 +116,8 @@ garcia-ia-ch/
         </section>
 
         <section id="contacto">
-            <h2>Contacto</h2>
-            <form>
+            <h2>Contacte con Garc.ia</h2>
+            <form id="contact-form">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -155,11 +160,18 @@ header {
     z-index: 1000;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
@@ -235,14 +247,27 @@ footer {
     color: #ecf0f1;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
 ├── js/
 │   └── main.js
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
+    const form = document.getElementById('contact-form');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Gracias por su mensaje. Nos pondremos en contacto pronto.');
@@ -259,8 +284,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-└── images/
-    └── logo.png
-git add .
-git commit -m "http://garc_ia.ch/"
-git push origin main
